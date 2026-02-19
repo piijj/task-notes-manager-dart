@@ -1,0 +1,24 @@
+version: 1.0
+configuration:
+  has_webserver: false
+  scoring:
+    command: rm -f report.json report.xml ; dart pub get ; dart test --file-reporter="json:report.json" ; dart run junitreport:tojunit --input report.json --output report.xml
+    files:
+      - report.xml
+  readonly_paths:
+    - lib/models/note.dart
+    - lib/models/note.g.dart
+    - lib/main.dart
+    - test/repositories/notes_repository_test.dart
+    - test/services/notes_service_test.dart
+    - test/helpers/note_helpers_test.dart
+  ide_config:
+    default_open_files:
+      - EXAM_INSTRUCTIONS.md
+      - lib/models/note.dart
+      - lib/repositories/notes_repository.dart
+      - lib/services/notes_service.dart
+      - lib/helpers/note_helpers.dart
+    project_menu:
+      install: dart pub get
+      test: dart test
