@@ -1,0 +1,15 @@
+name: task_notes_manager
+description: Task Notes Manager - Flutter Developer Assessment
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ^3.0.0
+
+dependencies:
+  json_annotation: ^4.8.1
+
+dev_dependencies:
+  test: ^1.24.0
+  json_serializable: ^6.7.1
+  build_runner: ^2.4.6
