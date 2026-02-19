@@ -8,7 +8,7 @@ The app was going smoothly until the lead developer left unexpectedly last week.
 
 Your manager, Sarah, sends you this message:
 
-> *"Hey! Welcome to the team. I know it's your first day, but we have a client demo tomorrow and some critical features aren't working. The good news is our QA team already wrote 40 unit tests that define exactly how everything should work. Can you get all the tests passing by end of day? The test files are really helpful — they show exactly what each function should do. You've got this!"*
+> *"Hey! Welcome to the team. I know it's your first day, but we have a client demo tomorrow and some critical features aren't working. The good news is our QA team already wrote unit tests that define exactly how everything should work. Can you get all the tests passing by end of day? The test files are really helpful — they show exactly what each function should do. You've got this!"*
 
 ---
 
@@ -52,7 +52,7 @@ Your manager, Sarah, sends you this message:
 ```
 lib/
 ├── models/
-│   ├── note.dart          ← Note data model (TODO)
+│   ├── note.dart          ← Note data model (COMPLETE — DO NOT EDIT)
 │   └── note.g.dart        ← Generated JSON code (DO NOT EDIT)
 ├── repositories/
 │   └── notes_repository.dart  ← Data storage (TODO)
@@ -62,7 +62,6 @@ lib/
     └── note_helpers.dart      ← Utility functions (TODO)
 
 test/
-├── models/note_test.dart
 ├── repositories/notes_repository_test.dart
 ├── services/notes_service_test.dart
 └── helpers/note_helpers_test.dart
@@ -72,7 +71,7 @@ test/
 
 ## Your Mission
 
-The QA team wrote **57 unit tests** that define how the app should behave. Your job is to find the incomplete implementations and fix them so all tests pass.
+The QA team wrote unit tests that define how the app should behave. Your job is to find the incomplete implementations and fix them so **all tests pass**.
 
 ---
 
@@ -105,10 +104,10 @@ class Note {
 
 ## Success Criteria
 
-- All **57 tests** pass
+- All tests pass (`dart test` exits with 0 failures)
 - No Dart analysis errors
 - Do NOT modify any test files
-- Do NOT modify `note.g.dart` (generated file)
+- Do NOT modify `note.dart` or `note.g.dart` (provided / generated)
 
 ---
 
@@ -116,9 +115,10 @@ class Note {
 
 1. **Read the test files** — they show exactly what each function should do
 2. **Look for `TODO` comments** — the previous developer left hints
-3. **Start with the model** — other layers depend on it
-4. **Work bottom-up** — Model → Repository → Helpers → Service
-5. **Watch out for edge cases** — empty strings, whitespace, case sensitivity
+3. **Start with the repository** — the service depends on it
+4. **Work bottom-up** — Repository → Helpers → Service
+5. **The Note model is already complete** — read it to understand the data structure
+6. **Watch out for edge cases** — empty strings, whitespace, case sensitivity
 
 ---
 

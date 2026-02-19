@@ -16,37 +16,34 @@ class Note {
     required this.createdAt,
   });
 
-  // TODO: Implement fromJson factory using the generated _$NoteFromJson
-  factory Note.fromJson(Map<String, dynamic> json) {
-    throw UnimplementedError();
-  }
+  factory Note.fromJson(Map<String, dynamic> json) => _$NoteFromJson(json);
 
-  // TODO: Implement toJson method using the generated _$NoteToJson
-  Map<String, dynamic> toJson() {
-    throw UnimplementedError();
-  }
+  Map<String, dynamic> toJson() => _$NoteToJson(this);
 
-  // TODO: Implement copyWith method that returns a new Note with updated fields
-  // Any parameter that is not provided should keep its current value
   Note copyWith({
     String? noteId,
     String? text,
     String? taskId,
     int? createdAt,
   }) {
-    throw UnimplementedError();
+    return Note(
+      noteId: noteId ?? this.noteId,
+      text: text ?? this.text,
+      taskId: taskId ?? this.taskId,
+      createdAt: createdAt ?? this.createdAt,
+    );
   }
 
-  // TODO: Implement equality operator
-  // Two notes are equal if all their fields are equal
   @override
   bool operator ==(Object other) {
-    throw UnimplementedError();
+    if (identical(this, other)) return true;
+    return other is Note &&
+        other.noteId == noteId &&
+        other.text == text &&
+        other.taskId == taskId &&
+        other.createdAt == createdAt;
   }
 
-  // TODO: Implement hashCode consistent with the equality operator
   @override
-  int get hashCode {
-    throw UnimplementedError();
-  }
+  int get hashCode => Object.hash(noteId, text, taskId, createdAt);
 }

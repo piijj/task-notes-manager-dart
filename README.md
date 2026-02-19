@@ -18,13 +18,13 @@ dart test
 
 ## For Examiners
 
-All TODO implementations are in 4 files:
+All TODO implementations are in 3 files:
 
 | File | TODOs | Description |
 |------|-------|-------------|
-| `lib/models/note.dart` | 5 | fromJson, toJson, copyWith, equality |
 | `lib/repositories/notes_repository.dart` | 6 | CRUD operations on in-memory list |
 | `lib/services/notes_service.dart` | 10 | Business logic, validation, state |
 | `lib/helpers/note_helpers.dart` | 3 | Pure utility functions |
 
-**Do not modify:** `lib/models/note.g.dart` (generated), any test files.
+**Pre-completed (readonly):** `lib/models/note.dart`, `lib/models/note.g.dart`
+**Do not modify:** Model files, any test files.
